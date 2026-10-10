@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Book a table, ask about catering, or send a message to Hearth & Oak in Ancoats.",
+    "Book a table, ask about catering, or send a message to Mallowfen Bakehouse in Ancoats.",
 };
 
 export default function ContactPage() {
