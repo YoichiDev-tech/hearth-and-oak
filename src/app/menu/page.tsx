@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Menu",
   description:
-    "Coffee, pastries, breakfast and lunch at Hearth & Oak, Ancoats. Menu changes with the season.",
+    "Coffee, pastries, breakfast and lunch at Mallowfen Bakehouse in Ancoats. Menu changes with the season.",
 };
 
 // I structure the menu so it is scannable on a phone — short sections,
