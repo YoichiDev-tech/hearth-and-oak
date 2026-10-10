@@ -2,22 +2,22 @@
 // site stays consistent and easy to update for the owner later.
 
 export const site = {
-  name: "Hearth & Oak",
-  tagline: "Neighbourhood café & bakery",
-  location: "Ancoats, Manchester",
-  address: "14 Blossom Street, Ancoats, Manchester M4 6AJ",
-  phone: "0161 555 0142",
-  email: "hello@hearthandoak.co.uk",
+  name: "Mallowfen Bakehouse",
+  tagline: "A neighbourhood bakery for slow mornings",
+  location: "Fictional case study · Manchester, UK",
+  address: "Fictional demo address · Ancoats, Manchester",
+  phone: "01632 960 123",
+  email: "hello@mallowfen.example",
   hours: [
     { day: "Monday – Friday", time: "7:30 – 16:00" },
     { day: "Saturday", time: "8:30 – 16:00" },
     { day: "Sunday", time: "9:00 – 15:00" },
   ],
   social: {
-    instagram: "https://instagram.com/hearthandoak",
-    facebook: "https://facebook.com/hearthandoak",
+    instagram: "",
+    facebook: "",
   },
-  domain: "hearthandoak.co.uk",
+  domain: "mallowfen.example",
 };
 
 export const navLinks = [

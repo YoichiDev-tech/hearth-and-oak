@@ -25,13 +25,14 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description:
-    "Independent neighbourhood café and bakery in Ancoats, Manchester. Proper coffee, fresh pastries, and a place that feels like home.",
+    "Fictional bakery website case study by PrismWave Studio. Demo content only; not a live business.",
   openGraph: {
     title: site.name,
     description: site.tagline,
     locale: "en_GB",
     type: "website",
   },
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({

@@ -111,6 +111,7 @@ export default function ContactForm() {
     setErrorMessage("");
 
     const form = e.currentTarget;
+    const formData = new FormData(form);
 
     try {
       const res = await fetch("/api/contact", {
@@ -119,6 +120,7 @@ export default function ContactForm() {
         body: JSON.stringify({
           ...formValues,
           phone: formValues.phone.trim() || undefined,
+          website: formData.get("website"),
           source: "website-contact",
         }),
       });
@@ -165,6 +167,10 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-5" aria-live="polite">
+      <div aria-hidden="true" className="absolute -left-[10000px] h-px w-px overflow-hidden">
+        <label htmlFor="website">Leave this field empty</label>
+        <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+      </div>
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-oak-800">
