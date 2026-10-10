@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Our story",
   description:
-    "How Hearth & Oak started, who we are, and why we still bake everything on site in Ancoats.",
+    "How Mallowfen Bakehouse started, who we are, and why we still bake everything on site in Ancoats.",
 };
 
 // About page — I write in the café’s voice so the page feels owned by
@@ -24,7 +24,7 @@ export default function AboutPage() {
           </h1>
           <div className="mt-8 space-y-5 text-base leading-relaxed text-oak-800">
             <p>
-              Hearth & Oak opened in 2022 with two people, a second-hand oven,
+              Mallowfen Bakehouse opened in 2022 with two people, a second-hand oven,
               and a very long list of things we refused to cut corners on.
               Coffee, bread, and the way people are treated when they walk in.
             </p>
