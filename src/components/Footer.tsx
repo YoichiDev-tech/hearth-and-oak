@@ -78,6 +78,9 @@ export default function Footer() {
           </div>
         </div>
 
+        <p className="mt-8 text-xs text-oak-500">
+          Fictional portfolio case study. Menu, business details, and testimonials are illustrative, not a live café.
+        </p>
         <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-oak-800 pt-8 sm:flex-row sm:items-center">
           <p className="text-xs text-oak-500">
             © {new Date().getFullYear()} {site.name}. All rights reserved.
