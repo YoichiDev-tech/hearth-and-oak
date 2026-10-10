@@ -111,6 +111,7 @@ export default function ContactForm() {
     setErrorMessage("");
 
     const form = e.currentTarget;
+    const formData = new FormData(form);
 
     try {
       const res = await fetch("/api/contact", {
@@ -119,6 +120,7 @@ export default function ContactForm() {
         body: JSON.stringify({
           ...formValues,
           phone: formValues.phone.trim() || undefined,
+          website: formData.get("website"),
           source: "website-contact",
         }),
       });
