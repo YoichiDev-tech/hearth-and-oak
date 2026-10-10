@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Visit",
   description:
-    "Find Hearth & Oak in Ancoats, Manchester — address, opening hours, and how to get here.",
+    "Find Mallowfen Bakehouse in Ancoats, Manchester — address, opening hours, and how to get here.",
 };
 
 export default function VisitPage() {
