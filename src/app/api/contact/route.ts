@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
 
   if (
     email.length > 254 ||
-    !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email) ||
+    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
     phone.length > 40 ||
     (phone.length > 0 && phone.length < 7) ||
     !SUBJECTS.has(subject) ||
