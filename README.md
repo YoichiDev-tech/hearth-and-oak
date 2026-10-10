@@ -1,4 +1,4 @@
-# Hearth & Oak — neighbourhood café & bakery
+# Mallowfen Bakehouse — neighbourhood café & bakery
 
 This is a complete, production-style website for an independent 
 SMB in Ancoats, Manchester.
@@ -37,7 +37,7 @@ Also included:
 - Sticky header with mobile menu and primary CTA
 - Footer with practical details on every page
 - Contact form -> API route → Supabase `enquiries` table
-- Demo mode if Supabase is not configured yet (form still "works" and logs to the server)
+- Server-side input validation and an explicit service-unavailable response if Supabase is missing; enquiry contents are not logged
 - Accessibility basics (focus rings, semantic HTML, clear labels)
 - SEO-friendly metadata per page
 
@@ -85,7 +85,9 @@ Use it as a reference when you talk to leads:
 
 - Swap the gradient hero block for real photography when the client is ready.
 - Point the Google Maps link at the real pin.
-- Connect Supabase and optionally add email notifications (Resend, Supabase Edge Functions, etc.).
+- Configure `NEXT_PUBLIC_SUPABASE_URL` and server-only `SUPABASE_SERVICE_ROLE_KEY`; the form fails closed until these are set.
+- Add provider-backed rate limiting and email notifications before accepting live enquiries.
+- Replace all fictional business details and publish an accurate privacy notice before launch.
 - Comments in the code are written in first person so the intent is clear when someone else opens the project later.
 
 
