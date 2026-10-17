@@ -1,4 +1,4 @@
--- Hearth & Oak contact enquiry storage.
+-- Take 5 contact enquiry storage.
 -- Apply with a trusted Supabase database/admin connection.
 create extension if not exists "pgcrypto";
 
