@@ -68,7 +68,7 @@ export async function POST(req: NextRequest) {
   if (!url || !serviceRoleKey) {
     console.error("[contact] Server-side Supabase configuration is missing.");
     return NextResponse.json(
-      { error: "We cannot receive messages right now. Please call us instead." },
+      { error: "We cannot receive messages right now. Please try again later." },
       { status: 503 }
     );
   }
@@ -98,7 +98,7 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     console.error("[contact] Unexpected request failure:", error instanceof Error ? error.message : "unknown error");
     return NextResponse.json(
-      { error: "Something went wrong. Please try again or call us." },
+      { error: "Something went wrong. Please try again or try again later." },
       { status: 500 }
     );
   }
