@@ -1,92 +1,73 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowRight, CheckCircle2, MonitorSmartphone, Sparkles } from "lucide-react";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Our story",
-  description:
-    "How Take 5 started, who we are, and why we still bake everything on site .",
+  description: "The thinking behind Take 5, a fictional Site Rescue demonstration by PrismWave Studio.",
+  robots: { index: false, follow: false },
 };
-
-// About page — I write in the café’s voice so the page feels owned by
-// the business, not by a web agency.
 
 export default function AboutPage() {
   return (
     <div className="bg-hearth-50">
       <section className="border-b border-hearth-200 bg-white">
-        <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-UX">
-          <p className="text-sm font-medium uppercase tracking-widest text-hearth-600">
-            Our story
+        <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+          <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-hearth-600">
+            <Sparkles className="h-4 w-4" /> The concept
           </p>
-          <h1 className="mt-3 font-display text-3xl font-bold text-hearth-950 sm:text-4xl">
-            A small room 
+          <h1 className="mt-4 font-display text-3xl font-bold leading-tight text-hearth-950 sm:text-4xl">
+            A little room to reset.
           </h1>
-          <div className="mt-UX space-y-5 text-base leading-relaxed text-oak-UX00">
+          <div className="mt-7 space-y-5 text-base leading-relaxed text-oak-800">
             <p>
-              Take 5 is a fictional café concept created for a Site Rescue demonstration.
-              and a very long list of things we refused to cut corners on.
-              Coffee, bread, and the way people are treated when they walk in.
+              Take 5 is a fictional café brand created by PrismWave Studio as a
+              Site Rescue demonstration. It is not a real business, and its menu,
+              sample hours and brand story are illustrative.
             </p>
             <p>
-              The brand, team and menu are illustrative. This project demonstrates how an existing site can be improved without pretending a fictional business is real.
+              The design direction is warm, calm and straightforward: clear
+              information, confident typography, thoughtful interactions and
+              an experience that adapts to the screen in front of you.
             </p>
             <p>
-              The visual direction is warm, clear and responsive, with content structured to make key information easy to find on any screen.
-            </p>
-            <p>
-              Take 5 is not a live venue. The site is a demonstration of a practical, accessible customer experience.
+              The point of this project is to show how an existing website can
+              be improved with practical UI/UX decisions and careful
+              implementation — without sending visitors to an invented address
+              or implying that a fictional business is live.
             </p>
           </div>
-
-          <div className="mt-10 flex flex-wrap gap-3">
-            <Link
-              href="/menu"
-              className="rounded-full bg-hearth-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-hearth-UX00"
-            >
-              See what we serve
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Link href="/menu" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-hearth-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-hearth-800">
+              Explore the menu <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link
-              href="/visit"
-              className="rounded-full border border-hearth-300 bg-white px-5 py-2.5 text-sm font-semibold text-hearth-UX00 transition hover:bg-hearth-50"
-            >
-              Explore hours
+            <Link href="/contact" className="inline-flex min-h-11 items-center rounded-full border border-hearth-300 bg-white px-5 py-2.5 text-sm font-semibold text-hearth-800 transition hover:bg-hearth-50">
+              Try the contact demo
             </Link>
           </div>
         </div>
       </section>
-
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-UX">
-        <div className="grid gap-UX sm:grid-cols-3">
-          <div className="card-surface">
-            <p className="text-3xl font-bold text-hearth-700">Demo</p>
-            <p className="mt-2 text-sm font-medium text-hearth-900">Opened</p>
-            <p className="mt-1 text-sm text-oak-600">
-              A fictional brand created to demonstrate a website rescue.
-            </p>
-          </div>
-          <div className="card-surface">
-            <p className="text-3xl font-bold text-hearth-700">UX</p>
-            <p className="mt-2 text-sm font-medium text-hearth-900">Team</p>
-            <p className="mt-1 text-sm text-oak-600">
-              Clear navigation, thoughtful interactions and mobile-first layout.
-            </p>
-          </div>
-          <div className="card-surface">
-            <p className="text-3xl font-bold text-hearth-700">1</p>
-            <p className="mt-2 text-sm font-medium text-hearth-900">Kitchen</p>
-            <p className="mt-1 text-sm text-oak-600">
-              A focused concept with a consistent visual system.
-            </p>
-          </div>
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="grid gap-5 md:grid-cols-3">
+          <article className="card-surface">
+            <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-hearth-100 text-hearth-700"><MonitorSmartphone className="h-5 w-5" /></span>
+            <h2 className="mt-4 font-display text-lg font-semibold text-hearth-900">Responsive by design</h2>
+            <p className="mt-2 text-sm leading-relaxed text-oak-700">Layouts, navigation and calls to action are designed to work comfortably on mobile, tablet and desktop.</p>
+          </article>
+          <article className="card-surface">
+            <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-hearth-100 text-hearth-700"><CheckCircle2 className="h-5 w-5" /></span>
+            <h2 className="mt-4 font-display text-lg font-semibold text-hearth-900">Clear expectations</h2>
+            <p className="mt-2 text-sm leading-relaxed text-oak-700">Illustrative content is labelled as such, and fake location details have been deliberately removed.</p>
+          </article>
+          <article className="card-surface">
+            <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-hearth-100 text-hearth-700"><Sparkles className="h-5 w-5" /></span>
+            <h2 className="mt-4 font-display text-lg font-semibold text-hearth-900">Built with intent</h2>
+            <p className="mt-2 text-sm leading-relaxed text-oak-700">The goal is a polished, maintainable site with accessible patterns rather than decorative complexity.</p>
+          </article>
         </div>
-
-        <p className="mt-12 text-center text-sm text-oak-600">
-          Questions about the Site Rescue approach?{" "}
-          <Link href="/contact" className="font-medium text-hearth-700 underline underline-offset-2">
-            Get in touch
-          </Link>{" "}
-          
+        <p className="mt-10 text-center text-sm text-oak-600">
+          Created for demonstration by <a href="https://prismwave-studio.vercel.app" target="_blank" rel="noopener noreferrer" className="font-semibold text-hearth-700 underline underline-offset-4 hover:text-hearth-900">PrismWave Studio</a>.
         </p>
       </section>
     </div>
