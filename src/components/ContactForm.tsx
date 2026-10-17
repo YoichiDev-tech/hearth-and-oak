@@ -151,8 +151,7 @@ export default function ContactForm() {
           Message sent
         </h3>
         <p className="mt-2 text-sm text-oak-700">
-          Thanks — we usually reply within one working day. For same-day tables,
-          give us a call.
+          Thanks — we usually reply within one working day. This is a demo form and may not be configured to receive messages.
         </p>
         <button
           type="button"
@@ -234,7 +233,7 @@ export default function ContactForm() {
             aria-invalid={Boolean(formErrors.phone)}
             aria-describedby={formErrors.phone ? "phone-error" : undefined}
             className={getInputClasses(Boolean(formErrors.phone))}
-            placeholder="07xxx xxxxxx"
+            placeholder="Optional phone number"
           />
           {formErrors.phone && (
             <p id="phone-error" className="mt-1.5 text-xs text-red-600">
