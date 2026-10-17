@@ -89,7 +89,7 @@ export async function POST(req: NextRequest) {
     if (error) {
       console.error("[contact] Supabase insert failed:", error.message);
       return NextResponse.json(
-        { error: "We could not save your message. Please try calling us." },
+        { error: "We could not save your message. Please try again later." },
         { status: 500 }
       );
     }
@@ -98,7 +98,7 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     console.error("[contact] Unexpected request failure:", error instanceof Error ? error.message : "unknown error");
     return NextResponse.json(
-      { error: "Something went wrong. Please try again or try again later." },
+      { error: "Something went wrong. Please try again later." },
       { status: 500 }
     );
   }
