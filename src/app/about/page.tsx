@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, MonitorSmartphone, Sparkles } from "lucide-react";
-import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Our story",
