@@ -138,7 +138,7 @@ export default function ContactForm() {
     } catch (err) {
       setStatus("error");
       setErrorMessage(
-        err instanceof Error ? err.message : "Unable to send. Please call us instead."
+        err instanceof Error ? err.message : "Unable to send this demo enquiry. Please try again later."
       );
     }
   }
