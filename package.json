@@ -1,8 +1,8 @@
 {
-  "name": "hearth-and-oak",
+  "name": "take-5-site-rescue",
   "version": "1.0.0",
   "private": true,
-  "description": "Mallowfen Bakehouse — fictional neighbourhood bakery case study by PrismWave Studio.",
+  "description": "Take 5 — fictional café Site Rescue demonstration by PrismWave Studio.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
