@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description:
-    "Fictional bakery website case study by PrismWave Studio. Demo content only; not a live business.",
+    "Take 5 is a fictional café concept and Site Rescue demonstration by PrismWave Studio. No real venue or live booking service.",
   openGraph: {
     title: site.name,
     description: site.tagline,
