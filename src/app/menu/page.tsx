@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Menu",
   description:
-    "Coffee, pastries, breakfast and lunch at Hearth & Oak, Ancoats. Menu changes with the season.",
+    "Illustrative coffee, bakery and lunch menu for the fictional Take 5 café concept.",
 };
 
 // I structure the menu so it is scannable on a phone — short sections,
@@ -111,8 +111,7 @@ export default function MenuPage() {
             What we are serving
           </h1>
           <p className="mt-4 text-oak-700">
-            Prices include VAT. Kitchen closes 30 minutes before we do. Pastries
-            and bread can sell out — come early if you have a favourite.
+            All menu items and prices are examples for this demo and are not available for purchase.
           </p>
         </div>
       </section>
@@ -124,13 +123,12 @@ export default function MenuPage() {
 
         <div className="card-surface-soft text-center">
           <p className="text-sm text-oak-700">
-            Dietary needs? Just ask — we mark allergens and can adapt most
-            plates. For larger groups or catering,{" "}
+            This illustrative menu does not represent a real food service. For a real project,{" "}
             <Link
               href="/contact"
               className="font-medium text-hearth-700 underline underline-offset-2"
             >
-              send us a message
+              contact us
             </Link>
             .
           </p>
