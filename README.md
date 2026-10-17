@@ -1,96 +1,75 @@
-# Mallowfen Bakehouse — neighbourhood café & bakery
+# Take 5 — Site Rescue demonstration
 
-This is a complete, production-style website for an independent 
-SMB in Ancoats, Manchester.
+Take 5 is a fictional café concept used by **PrismWave Studio** to demonstrate how an existing website can be reviewed, refreshed and made easier to use.
 
-I built it as a **case-study site** for PrismWave Studio — the kind of site 
-we deliver for small and medium businesses that need to look serious online, 
-take enquiries, and convert walk-ins without relying on Instagram alone.
+**This is not a live business.** No real venue, address, phone number, map pin, booking desk or operating hours are represented. Menu items, prices and sample hours are illustrative content only.
 
-It is not a live client project. It is a realistic example of what we ship: 
-clear structure, mobile-first layout, working contact flow, 
-and room for the owner to update copy and connect real data later.
+## What this demo demonstrates
 
+- Consistent brand identity and clear page hierarchy
+- Responsive layouts designed for small screens first
+- Accessible navigation, visible focus states and clear calls to action
+- A menu that is easy to scan on mobile
+- A contact form with client-side and server-side validation
+- A server-side Supabase integration that fails closed when configuration is missing
+- Shared site configuration for consistent content and navigation
+- Demo messaging that avoids sending visitors to invented locations
 
 ## Stack
 
-- **Next.js 15** (App Router)
-- **React 19 + TypeScript**
-- **Tailwind CSS** (custom warm brand palette)
-- **Supabase** (contact / enquiry storage)
-- **lucide-react** for icons
+- Next.js 15 App Router
+- React 19 and TypeScript
+- Tailwind CSS
+- Supabase for enquiry storage when correctly configured
+- lucide-react icons
 
-No page builders. No bloated themes. 
-Just code that is easy to host, easy to change, and easy to hand over.
+## Run locally
 
+```bash
+npm ci
+npm run dev
+```
 
-## What is included
+Open http://localhost:3000.
 
-| **Home** | Short hero, three trust points, clear CTAs |
-| **Menu** | Coffee, bakery, kitchen — scannable on a phone |
-| **Our story** | Brand voice, not agency filler |
-| **Visit** | Address, hours, how to get there, group CTA |
-| **Contact** | Form + phone / email / address |
+Check production compilation with:
 
-Also included:
+```bash
+npm run build
+```
 
-- Sticky header with mobile menu and primary CTA
-- Footer with practical details on every page
-- Contact form -> API route → Supabase `enquiries` table
-- Server-side input validation and an explicit service-unavailable response if Supabase is missing; enquiry contents are not logged
-- Accessibility basics (focus rings, semantic HTML, clear labels)
-- SEO-friendly metadata per page
+## Contact form configuration
 
+The contact API requires server-side environment variables:
+
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `SUPABASE_SERVICE_ROLE_KEY`
+
+Never expose the service-role key to the browser or commit it to the repository. Without valid configuration, the API returns a service-unavailable response instead of pretending a message was delivered.
+
+Review `supabase-schema.sql` before applying it to a real project. Before any real launch, configure rate limiting, abuse monitoring, notification delivery, privacy information and real business-approved content.
 
 ## Project structure
 
 ```
 src/
   app/
-    page.tsx          → Home
-    about/            → Our story
-    menu/             → Menu
-    visit/            → Visit / find us
-    contact/          → Contact + form
-    api/contact/      → Server route that writes to Supabase
+    page.tsx
+    about/page.tsx
+    menu/page.tsx
+    visit/page.tsx
+    contact/page.tsx
+    api/contact/route.ts
   components/
+    ContactForm.tsx
     Header.tsx
     Footer.tsx
-    ContactForm.tsx
   lib/
-    site.ts           -> Business copy & nav in one place
-    supabase.ts       -> Browser client + types
+    site.ts
 ```
 
-I keep business text in `src/lib/site.ts` so an owner (or a junior) can change address, hours, or phone without hunting through components.
+## Site Rescue context
 
----
+This is a created demo, not a real client rescue. It demonstrates the standard of UI/UX, responsive implementation and careful content handling PrismWave Studio can bring to an existing site.
 
-## Why this site exists (PrismWave)
-
-Most SMB sites we audit are either:
-
-- a Facebook page with no real web presence, or
-- a template that looks the same as every other café in the city.
-
-This project is the opposite direction: one clear brand voice, one primary action (book / visit / enquire), and a stack that does not lock the owner into a monthly page-builder fee.
-
-Use it as a reference when you talk to leads:
-
-- This is the standard of site we build for neighbourhood businesses.
-- It works on a phone, takes messages, and is ready for real photos and a live Supabase project.
-
-
-## Notes for hand-off
-
-- Swap the gradient hero block for real photography when the client is ready.
-- Point the Google Maps link at the real pin.
-- Configure `NEXT_PUBLIC_SUPABASE_URL` and server-only `SUPABASE_SERVICE_ROLE_KEY`; the form fails closed until these are set.
-- Add provider-backed rate limiting and email notifications before accepting live enquiries.
-- Replace all fictional business details and publish an accurate privacy notice before launch.
-- Comments in the code are written in first person so the intent is clear when someone else opens the project later.
-
-
-**Built by PrismWave Studio**  
-Web sites and revamps for SMBs.
-
+**Built by PrismWave Studio.**
