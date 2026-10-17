@@ -151,7 +151,7 @@ export default function ContactForm() {
           Message sent
         </h3>
         <p className="mt-2 text-sm text-oak-700">
-          Thanks — we usually reply within one working day. This is a demo form and may not be configured to receive messages.
+          This demo only accepts enquiries when the server connection is configured. No real bookings or customer service are available.
         </p>
         <button
           type="button"
