@@ -53,13 +53,15 @@ export default function Header() {
           className="inline-flex items-center justify-center rounded-md p-2 text-hearth-800 md:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
       {open && (
-        <div className="border-t border-hearth-200 bg-hearth-50 px-4 py-4 md:hidden">
+        <div id="mobile-navigation" className="border-t border-hearth-200 bg-hearth-50 px-4 py-4 md:hidden">
           <nav className="flex flex-col gap-1">
             {navLinks.map((link) => {
               const active = pathname === link.href;
